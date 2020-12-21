@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.menu .header {
+  font-size: 36px;
+  color: #737373;
+  padding: 16px;
+  line-height: 42px;
+  min-height: 42px;
+  /* Chrome was unable to set height to 42px hence this trick is used */
+}
+
+.menu .menu-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu .menu-items section {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  padding: 16px;
+  gap: 16px;
+}
+
+.menu .menu-items section > .title {
+  color: #737373;
+  font-size: 24px;
+  line-height: 28px;
+  height: 28px;
+}
+
+.menu .menu-items section .items {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  gap: 8px;
+}
+
+.menu .menu-items section .items .items-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu .menu-items .stats .data {
+  display: flex;
+  height: 21px;
+  gap: 8px;
+}
+
+.menu .menu-items .stats .data .label {
+  width: 120px;
+  text-align: right;
+}
+
+.menu .menu-items .stats .data .value {
+  width: 100px;
+}
+
+.input-container {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  align-items: center;
+  cursor: text;
+  /* Trick to Show inner border */
+  box-shadow: inset 0 0 0 1px #CCCCCC;
+}
+
+.input-container .title {
+  line-height: 21px;
+  height: 21px;
+  color: #808080;
+}
+
+.input-container .color-preview {
+  width: 21px;
+  height: 21px;
+  background-color: #662a2a;
+}
+
+.input-container input {
+  color: #404040;
+}
+
+.input-container input[type="number"] {
+  width: 40px;
+  border: none;
+  outline: none;
+  /** Source: https://stackoverflow.com/a/40690384 */
+}
+
+.input-container input[type="number"], .input-container input[type="number"]::-webkit-inner-spin-button, .input-container input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+
+.input-container input[type="color"] {
+  display: none;
+}
+
+.mouse-pointer {
+  cursor: pointer !important;
+}
+
+button {
+  margin: 0;
+  padding: 16px;
+  border: none;
+  outline: none;
+  background: none;
+  color: #404040;
+  cursor: pointer;
+  /* Trick to Show inner border */
+  box-shadow: inset 0 0 0 1px #CCCCCC;
+}
+
+button, .mouse-pointer {
+  transition: transform 250ms ease-in-out;
+}
+
+button:active, .mouse-pointer:active {
+  transform: scale3d(0.9, 0.9, 0.9);
+}
+
+.select {
+  padding: 16px;
+  /* Trick to Show inner border */
+  box-shadow: inset 0 0 0 1px #CCCCCC;
+}
+
+.select .title {
+  color: #808080;
+}
+
+.select select {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#maze {
+  width: 500px;
+  height: 500px;
+  background-color: #1D2029;
+}
+
+:root, html, body {
+  padding: 0;
+  margin: 0;
+}
+
+:root, body, html, select, button, input {
+  font-size: 18px;
+  line-height: 21px;
+  color: #404040;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main .menu {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  min-width: 384px;
+}
+
+main .maze-container {
+  flex-grow: 1;
+  background-color: #F2F2F2;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Remove Scroll Bar */
+.menu, .maze-container {
+  scrollbar-width: none;
+}
+
+.menu::-webkit-scrollbar, .maze-container::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}

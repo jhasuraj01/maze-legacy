@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "./menu";
+@import "./maze";
+
+:root, html, body {
+    padding: 0;
+    margin: 0;
+}
+
+:root, body, html, select, button, input {
+    font-size: 18px;
+    line-height: 21px;
+    color: #404040;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    .menu {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        min-width: 384px;
+    }
+    .maze-container {
+        flex-grow: 1;
+        background-color: #F2F2F2;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/* Remove Scroll Bar */
+.menu, .maze-container {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+}

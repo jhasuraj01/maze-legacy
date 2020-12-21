@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Maze Game powered by AI | By Suraj Jha</title>
+    <link rel="stylesheet" href="./src/css/index.css">
+</head>
+
+<body>
+    <main>
+        <div class="menu">
+            <div class="header">Online Maze Game</div>
+            <div class="menu-items">
+                <section>
+                    <div class="title">Controls</div>
+                    <div class="items">
+                        <div class="items-row">
+                            <button id="refresh">Refresh</button>
+                            <button id="share">Share My Score</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="stats">
+                    <div class="title">Stats</div>
+                    <div class="items">
+                        <div class="items-row">
+                            <div class="data">
+                                <div class="label">Actions:</div>
+                                <div class="value">30</div>
+                            </div>
+                        </div>
+                        <div class="items-row">
+                            <div class="data">
+                                <div class="label">Undos:</div>
+                                <div class="value">20</div>
+                            </div>
+                        </div>
+                        <div class="items-row">
+                            <div class="data">
+                                <div class="label">Path Length:</div>
+                                <div class="value">10</div>
+                            </div>
+                        </div>
+                        <div class="items-row">
+                            <div class="data">
+                                <div class="label">Time:</div>
+                                <div class="value">5 min</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="title">AI</div>
+                    <div class="items">
+                        <label class="select items-row" for="select-button">
+                            <div class="title">Algorithm</div>
+                            <select id="select-button">
+                                <option value="depthFirstSearch">Depth-First Search</option>
+                                <option value="breadthFirstSearch">Breadth-First Search</option>
+                                <option value="greedyBestFirstSearch">Greedy Best-First Search</option>
+                                <option value="aStarSearch" selected>A* Search</option>
+                            </select>
+                        </label>
+                        <div class="items-row">
+                            <button id="solve">Get Solution</button>
+                            <button id="hint">Get Hint</button>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="title">Customizations</div>
+                    <div class="items">
+                        <div class="items-row">
+                            <label for="columns" class="input-container">
+                                <div class="title">Columns</div>
+                                <input type="number" id="columns" placeholder="10" value="20">
+                            </label>
+                            <label for="rows" class="input-container">
+                                <div class="title">Rows</div>
+                                <input type="number" id="rows" placeholder="10" value="20">
+                            </label>
+                        </div>
+                        <div class="items-row">
+                            <label for="background" class="input-container mouse-pointer">
+                                <div class="title">Background</div>
+                                <div class="color-preview"></div>
+                                <input class="color-input" type="color" id="background">
+                            </label>
+                            <label for="path" class="input-container mouse-pointer">
+                                <div class="title">Path</div>
+                                <div class="color-preview"></div>
+                                <input class="color-input" type="color" id="path">
+                            </label>
+                        </div>
+                        <div class="items-row">
+                            <label class="mouse-pointer input-container" for="wall">
+                                <div class="title">Wall</div>
+                                <div class="color-preview"></div>
+                                <input class="color-input" type="color" id="wall">
+                            </label>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="maze-container">
+            <div id="maze"></div>
+        </div>
+    </main>
+</body>
+
+</html>

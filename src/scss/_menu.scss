@@ -1,0 +1,132 @@
+$headingColor: #737373;
+
+.menu {
+    .header {
+        font-size: 36px;
+        color: $headingColor;
+        padding: 16px;
+        line-height: 42px;
+        min-height: 42px; /* Chrome was unable to set height to 42px hence this trick is used */
+    }
+    .menu-items {
+        display: flex;
+        flex-direction: column;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            align-content: stretch;
+            padding: 16px;
+            gap: 16px;
+
+            > .title {
+                color: $headingColor;
+                font-size: 24px;
+                line-height: 28px;
+                height: 28px;
+            }
+
+            .items {
+                display: flex;
+                flex-direction: column;
+                align-content: stretch;
+                gap: 8px;
+
+                .items-row {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+            }
+        }
+        .stats {
+            .data {
+                display: flex;
+                height: 21px;
+                gap: 8px;
+                .label {
+                    width: 120px;
+                    text-align: right;
+                }
+                .value {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+.input-container {
+    display: flex;
+    padding: 16px;
+    gap: 16px;
+    align-items: center;
+    cursor: text;
+
+    /* Trick to Show inner border */
+    box-shadow: inset 0 0 0 1px #CCCCCC;
+
+    .title {
+        line-height: 21px;
+        height: 21px;
+        color: #808080;
+    }
+    .color-preview {
+        width: 21px;
+        height: 21px;
+        background-color: rgb(102, 42, 42);
+    }
+    input {
+        color: #404040;
+    }
+    input[type="number"] {
+        width: 40px;
+        border: none;
+        outline: none;
+
+        /** Source: https://stackoverflow.com/a/40690384 */
+        &, &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+        }
+    }
+    input[type="color"] {
+        display: none;
+    }
+}
+.mouse-pointer {
+    cursor: pointer !important;
+}
+button {
+    margin: 0;
+    padding: 16px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #404040;
+    cursor: pointer;
+
+    /* Trick to Show inner border */
+    box-shadow: inset 0 0 0 1px #CCCCCC;
+}
+button, .mouse-pointer {
+    transition: transform 250ms ease-in-out;
+    
+    &:active {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+}
+.select {
+    padding: 16px;
+    /* Trick to Show inner border */
+    box-shadow: inset 0 0 0 1px #CCCCCC;
+    .title {
+        color: #808080;
+    }
+    select {
+        flex-grow: 1;
+        border: none;
+        outline: none;
+        background: none;
+    }
+}
