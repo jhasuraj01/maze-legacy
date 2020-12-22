@@ -2,4 +2,30 @@
     width: 500px;
     height: 500px;
     background-color: #1D2029;
+    position: relative;
+
+    .box {
+        box-sizing: border-box;
+        border: 2px solid black;
+        cursor: pointer;
+        &:hover {
+            background-color: #000000;
+        }
+    }
+
+    .selected-box {
+        background-color: #7000cc !important;
+    }
+    .topWall {
+        border-top: 2px solid black;
+    }
+    .bottomWall {
+        border-bottom: 2px solid black;
+    }
+    .leftWall {
+        border-left: 2px solid black;
+    }
+    .rightWall {
+        border-right: 2px solid black;
+    }
 }

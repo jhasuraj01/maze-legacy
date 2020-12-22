@@ -143,6 +143,37 @@ button:active, .mouse-pointer:active {
   width: 500px;
   height: 500px;
   background-color: #1D2029;
+  position: relative;
+}
+
+#maze .box {
+  box-sizing: border-box;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+#maze .box:hover {
+  background-color: #000000;
+}
+
+#maze .selected-box {
+  background-color: #7000cc !important;
+}
+
+#maze .topWall {
+  border-top: 2px solid black;
+}
+
+#maze .bottomWall {
+  border-bottom: 2px solid black;
+}
+
+#maze .leftWall {
+  border-left: 2px solid black;
+}
+
+#maze .rightWall {
+  border-right: 2px solid black;
 }
 
 :root, html, body {
