@@ -31,7 +31,7 @@ export default class {
     }
     // Create New
     refresh() {
-
+        this._draw()
     }
     _draw() {
         // Resize
@@ -48,7 +48,6 @@ export default class {
                 box.style.top = r*36 + "px"
                 box.style.left = c*36 + "px"
                 box.classList.add("box")
-                console.log(maze[r][c]);
                 if (maze[r][c].topWall) {
                     box.classList.add("topWall")
                 }

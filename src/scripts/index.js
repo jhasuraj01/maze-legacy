@@ -15,7 +15,7 @@ const wallColorInp = document.getElementById("wall")
 // event listners
 refreshBtn.addEventListener("click", () => {
     // TO Do ...
-    console.log("Button Clicked: refreshBtn")
+    maze.refresh()
 })
 shareBtn.addEventListener("click", () => {
     // TO Do ...
@@ -30,12 +30,14 @@ hintBtn.addEventListener("click", () => {
     console.log("Button Clicked: hintBtn")
 })
 columnsInp.addEventListener("input", () => {
-    // TO Do ...
-    console.log("Column Count Changed: ", columnsInp.value)
+    maze.set({
+        columns: Number(columnsInp.value)
+    })
 })
 rowsInp.addEventListener("input", () => {
-    // TO Do ...
-    console.log("Row Count Changed: ", rowsInp.value)
+    maze.set({
+        rows: Number(rowsInp.value)
+    })
 })
 algorithmInp.addEventListener("change", () => {
     // TO Do ...
